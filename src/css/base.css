@@ -15,6 +15,7 @@
 	--back-color: #21553e;
 	--back: #4fa49c;
 	--hover-color: #da9318;
+  --text-color: #1d1d1d;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -29,11 +30,32 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+  background-color: var(--background);
 }
 
 main {
   flex-grow: 1;
 }
+
 main:has(.back-link) {
   text-align: center;
+}
+
+.section-title {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 28px;
+    line-height: 1.57;
+    margin-bottom: 40px;
+  }
 }
