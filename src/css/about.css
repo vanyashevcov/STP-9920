@@ -18,11 +18,11 @@
 }
 
 @media only screen and (min-width: 1200px) {
-    .about {
-        margin: 0 auto;
-        width: 892px;
-        padding: 0 90px;
-    }
+  .about {
+    margin: 0 auto;
+    width: 892px;
+    padding: 0 90px;
+  }
   .about-list {
     display: flex;
     flex-direction: row;
@@ -35,4 +35,7 @@
     width: 352px;
   }
 
+  .about-text {
+    text-align: left;
+  }
 }
