@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
+{"version":3,"file":"index.js","sources":["../src/js/footer.js"],"sourcesContent":["// Update footer year\ndocument.addEventListener('DOMContentLoaded', function () {\n  const yearElement = document.getElementById('current-year');\n  if (yearElement) {\n    yearElement.textContent = new Date().getFullYear();\n  }\n});\n"],"names":["yearElement"],"mappings":"0uBACA,SAAS,iBAAiB,mBAAoB,UAAY,CACxD,MAAMA,EAAc,SAAS,eAAe,cAAc,EACtDA,IACFA,EAAY,YAAc,IAAI,KAAM,EAAC,YAAW,EAEpD,CAAC"}
