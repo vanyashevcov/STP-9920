@@ -49,13 +49,12 @@ main:has(.back-link) {
   letter-spacing: 0.02em;
   color: var(--text-color);
   text-align: center;
-  margin-bottom: 32px;
+  padding: 8px;
 }
 
 @media only screen and (min-width: 1200px) {
   .section-title {
     font-size: 28px;
     line-height: 1.57;
-    margin-bottom: 40px;
   }
 }
