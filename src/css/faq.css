@@ -21,10 +21,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.ac:hover {
-  transform: translateY(-2px);
-}
-
 .ac-trigger {
   width: 100%;
   background-color: #f7c876;
