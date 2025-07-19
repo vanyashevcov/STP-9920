@@ -74,5 +74,10 @@
   .characters-list {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+  }
+  .characters-item {
+    width: 246px;
+    flex-shrink: 0;
   }
 }
