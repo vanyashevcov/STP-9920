@@ -21,7 +21,7 @@
 }
 
 .item-m {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 .characters-background {
@@ -67,8 +67,12 @@
 }
 
 @media only screen and (min-width: 1200px) {
-    .characters-list {
-        display: flex;
-        flex-direction: row;
-    }
+  .characters {
+    padding: 44px 72px;
+  }
+
+  .characters-list {
+    display: flex;
+    flex-direction: row;
+  }
 }
