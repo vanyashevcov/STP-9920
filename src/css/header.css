@@ -1,16 +1,28 @@
 .header {
   border-bottom: 1px solid rgba(184, 112, 0, 0.7);
-  padding: 16px 0;
+  padding: 8px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--background);
+  z-index: 1000;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  padding: 8px;
+}
+
+.logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 2px;
 }
 
 .nav {
@@ -18,28 +30,21 @@
 }
 
 .menu-open-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: transparent;
   border: none;
-}
-
-.menu-open-icon {
-  fill: var(--text-color);
+  padding: 0;
 }
 
 .mob-nav {
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   position: fixed;
   top: 0;
   left: 0;
   background-color: var(--background);
   display: flex;
   flex-direction: column;
-  transition: opacity 250ms ease-in-out,
-    visibility 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
 }
 
 .mob-nav[data-visible='close'] {
@@ -58,21 +63,16 @@
   position: absolute;
   top: 24px;
   right: 24px;
-  width: 28px;
-  height: 28px;
+  background-color: transparent;
   border: none;
-  cursor: pointer;
-}
-
-.mob-menu {
-  margin-top: 72px;
-  margin-left: 32px;
+  padding: 0;
 }
 
 .mob-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
+  padding: 72px 24px;
 }
 
 .mob-menu-link {
@@ -80,12 +80,14 @@
   font-size: 16px;
   line-height: 1.75;
   letter-spacing: 0.02em;
+  padding: 8px;
   color: var(--text-color);
   transition: color 250ms ease-in-out;
 }
 
 .mob-menu-item:hover .mob-menu-link,
-.mob-menu-item:focus .mob-menu-link {
+.mob-menu-item:focus .mob-menu-link,
+.mob-menu-item:active .mob-menu-link {
   color: var(--ornaments);
   text-decoration: underline;
 }
@@ -97,6 +99,11 @@
 @media only screen and (min-width: 1200px) {
   .header {
     padding: 0;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
   }
 
   .nav {
@@ -123,8 +130,10 @@
   }
 
   .nav-link:hover,
-  .nav-link:focus {
+  .nav-link:focus,
+  .nav-link:active {
     color: var(--ornaments);
+    text-decoration: underline;
   }
 
   .menu-open-btn {

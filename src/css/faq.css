@@ -1,0 +1,108 @@
+.faq {
+  padding: 28px 0;
+}
+.faq-title {
+  margin-bottom: 32px;
+}
+
+.character-image {
+  display: none;
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ac {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.ac:hover {
+  transform: translateY(-2px);
+}
+
+.ac-trigger {
+  width: 100%;
+  background-color: #f7c876;
+  padding: 4px 13px 4px 8px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.ac.is-active .ac-trigger {
+  border-radius: 20px 20px 0 0;
+  background-color: var(--add-to-general);
+}
+
+.ac-trigger:hover,
+.ac-trigger:focus {
+  background: var(--add-to-general);
+}
+
+.button-text {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--ornaments);
+  padding: 8px;
+  border-radius: 0 0 20px 20px;
+}
+
+.ac-icon {
+  width: 24px;
+  height: 12px;
+  transition: transform 0.3s ease-in-out;
+  fill: var(--ornaments);
+}
+
+.ac-panel {
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0 0 20px 20px;
+  margin-top: -1px;
+}
+
+.ac-text {
+  padding: 14px 12px 14px 17px;
+  background-color: var(--add-to-general-2);
+}
+
+.ac-text p {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+@media (min-width: 1200px) {
+  .faq {
+    padding: 44px 0;
+  }
+
+  .faq-content {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  .character-image {
+    display: block;
+    width: 460px;
+    height: 400px;
+    border-radius: 20px;
+  }
+}

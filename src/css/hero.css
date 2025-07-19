@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.hero {
+  padding: 156px 16px 156px 16px;
+  background-image: url(../images/hero/hero-mob-1x.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 320px;
+  margin: 0 auto;
+  margin-top: 64px;
+}
+
+.hero-title {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 157%;
+  letter-spacing: 0.02em;
+  color: var(--general);
+  text-shadow: 0 4px 16px 0 var(--ornaments);
+  max-width: 376px;
+}
+
+.hero-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 167%;
+  letter-spacing: 0.02em;
+  color: var(--general);
+  text-shadow: 0 4px 16px 0 var(--ornaments);
+  margin-top: 8px;
+}
+
+.hero-btn {
+  border-radius: 20px;
+  border: none;
+  padding: 8px;
+  width: 288px;
+  height: 56px;
+  box-shadow: 0 4px 16px 0 var(--ornaments);
+  background: var(--general);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--ornaments);
+  margin-top: 40px;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/hero/hero-mob-2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 160px 0 160px 72px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 72px;
+    background-image: url(../images/hero/hero-1x.jpg);
+  }
+
+  .hero-title {
+    font-size: 40px;
+    line-height: 140%;
+  }
+
+  .hero-text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-btn {
+    width: 336px;
+    margin-top: 56px;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/hero/hero-2x.jpg);
+  }
+}
