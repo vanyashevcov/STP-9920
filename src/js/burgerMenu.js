@@ -4,18 +4,24 @@ const burgerMenuEl = document.querySelector('[data-visible]');
 const menuLinksEl = document.querySelectorAll('.mob-menu-link');
 
 const closeMenu = () => {
-  burgerMenuEl.dataset.visible = 'close';
+  if (burgerMenuEl) {
+    burgerMenuEl.dataset.visible = 'close';
+  }
   document.body.style.overflow = '';
 };
 
 const openMenu = () => {
-  burgerMenuEl.dataset.visible = 'open';
+  if (burgerMenuEl) {
+    burgerMenuEl.dataset.visible = 'open';
+  }
   document.body.style.overflow = 'hidden';
 };
 
-openBtnEl.addEventListener('click', openMenu);
-closeBtnEl.addEventListener('click', closeMenu);
+if (openBtnEl) openBtnEl.addEventListener('click', openMenu);
+if (closeBtnEl) closeBtnEl.addEventListener('click', closeMenu);
 
-menuLinksEl.forEach(link => {
-  link.addEventListener('click', closeMenu);
-});
+if (menuLinksEl && menuLinksEl.length > 0) {
+  menuLinksEl.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+}
