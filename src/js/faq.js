@@ -54,23 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1200) {
     addScrollAnimation();
   }
-
-  const triggers = document.querySelectorAll('.ac-trigger');
-  triggers.forEach(trigger => {
-    trigger.addEventListener('mouseenter', function () {
-      const accordionItem = trigger.closest('.ac');
-      if (!accordionItem.classList.contains('is-active')) {
-        trigger.style.transform = 'scale(1.02)';
-      }
-    });
-
-    trigger.addEventListener('mouseleave', function () {
-      trigger.style.transform = 'scale(1)';
-    });
-  });
 
   triggers.forEach((trigger, index) => {
     trigger.addEventListener('keydown', function (e) {
