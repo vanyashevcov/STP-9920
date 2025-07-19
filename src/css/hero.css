@@ -5,14 +5,15 @@
 }
 
 .hero {
-  padding: 156px 0;
-  padding-left: 16px;
+  padding: 156px 16px 156px 16px;
   background-image: url(../images/hero/hero-mob-1x.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   max-width: 320px;
   margin: 0 auto;
+  margin-top: 64px;
+  scroll-margin-top: 64px;
 }
 
 .hero-title {
@@ -62,10 +63,10 @@
 
 @media screen and (min-width: 1200px) {
   .hero {
-    padding: 160px 0;
-    padding-left: 72px;
+    padding: 160px 0 160px 72px;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 72px;
     background-image: url(../images/hero/hero-1x.jpg);
   }
 

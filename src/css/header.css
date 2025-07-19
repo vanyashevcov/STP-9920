@@ -22,6 +22,7 @@
 .logo-img {
   width: 32px;
   height: 32px;
+  border-radius: 2px;
 }
 
 .nav {
@@ -132,6 +133,7 @@
   .nav-link:focus,
   .nav-link:active {
     color: var(--ornaments);
+    text-decoration: underline;
   }
 
   .menu-open-btn {
