@@ -94,6 +94,7 @@
   }
 
   .faq-content {
+    display: flex;
     flex-direction: row;
     gap: 80px;
   }
