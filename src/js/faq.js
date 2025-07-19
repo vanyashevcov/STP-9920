@@ -18,13 +18,17 @@ document.addEventListener('DOMContentLoaded', function () {
     onOpen: function (currentElement) {
       const icon = currentElement.querySelector('.ac-header .ac-icon use');
       if (icon) {
-        icon.setAttribute('href', 'srcimages/sprite.svg#icon-arrow-up');
+        const spritePath = icon.getAttribute('href')?.split('#')[0] || './images/sprite.svg';
+        icon.setAttribute('href', `${spritePath}#icon-arrow-up`);
+        icon.setAttribute('xlink:href', `${spritePath}#icon-arrow-up`);
       }
     },
     onClose: function (currentElement) {
       const icon = currentElement.querySelector('.ac-header .ac-icon use');
       if (icon) {
-        icon.setAttribute('href', 'src/images/sprite.svg#icon-arrow-down');
+        const spritePath = icon.getAttribute('href')?.split('#')[0] || './images/sprite.svg';
+        icon.setAttribute('href', `${spritePath}#icon-arrow-down`);
+        icon.setAttribute('xlink:href', `${spritePath}#icon-arrow-down`);
       }
     },
   });
