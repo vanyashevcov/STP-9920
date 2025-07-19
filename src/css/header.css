@@ -1,6 +1,12 @@
 .header {
   border-bottom: 1px solid rgba(184, 112, 0, 0.7);
   padding: 8px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--background);
+  z-index: 1000;
 }
 
 .header-container {
@@ -79,7 +85,8 @@
 }
 
 .mob-menu-item:hover .mob-menu-link,
-.mob-menu-item:focus .mob-menu-link {
+.mob-menu-item:focus .mob-menu-link,
+.mob-menu-item:active .mob-menu-link {
   color: var(--ornaments);
   text-decoration: underline;
 }
@@ -122,7 +129,8 @@
   }
 
   .nav-link:hover,
-  .nav-link:focus {
+  .nav-link:focus,
+  .nav-link:active {
     color: var(--ornaments);
   }
 
