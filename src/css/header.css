@@ -98,7 +98,12 @@
 
 @media only screen and (min-width: 1200px) {
   .header {
-    padding: 0;
+    padding: 8px 0;
+  }
+  .header-container {
+    max-width: 1200px;
+    padding: 0 68px;
+    margin: 0 auto;
   }
 
   .logo-img {
@@ -125,7 +130,7 @@
     line-height: 1.75;
     letter-spacing: 0.02em;
     color: #1d1d1d;
-    padding: 22px 0;
+    padding: 8px;
     transition: color 0.3s ease;
   }
 

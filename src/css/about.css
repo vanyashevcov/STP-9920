@@ -24,8 +24,6 @@
 
 @media only screen and (min-width: 1200px) {
   .about {
-    margin: 0 auto;
-    width: 892px;
     padding: 88px 0 44px;
   }
 
@@ -36,6 +34,7 @@
   .about-list {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     row-gap: 32px;
     column-gap: 188px;

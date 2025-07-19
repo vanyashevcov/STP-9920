@@ -16,15 +16,19 @@ document.addEventListener('DOMContentLoaded', function () {
       currentElement.style.transition = 'all 0.4s ease';
     },
     onOpen: function (currentElement) {
-      const icon = currentElement.querySelector('.ac-icon use');
+      const icon = currentElement.querySelector('.ac-header .ac-icon use');
       if (icon) {
-        icon.setAttribute('href', './images/sprite.svg#icon-arrow-up');
+        const spritePath = icon.getAttribute('href')?.split('#')[0] || './images/sprite.svg';
+        icon.setAttribute('href', `${spritePath}#icon-arrow-up`);
+        icon.setAttribute('xlink:href', `${spritePath}#icon-arrow-up`);
       }
     },
     onClose: function (currentElement) {
-      const icon = currentElement.querySelector('.ac-icon use');
+      const icon = currentElement.querySelector('.ac-header .ac-icon use');
       if (icon) {
-        icon.setAttribute('href', './images/sprite.svg#icon-arrow-down');
+        const spritePath = icon.getAttribute('href')?.split('#')[0] || './images/sprite.svg';
+        icon.setAttribute('href', `${spritePath}#icon-arrow-down`);
+        icon.setAttribute('xlink:href', `${spritePath}#icon-arrow-down`);
       }
     },
   });
@@ -54,23 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1200) {
     addScrollAnimation();
   }
 
   const triggers = document.querySelectorAll('.ac-trigger');
-  triggers.forEach(trigger => {
-    trigger.addEventListener('mouseenter', function () {
-      const accordionItem = trigger.closest('.ac');
-      if (!accordionItem.classList.contains('is-active')) {
-        trigger.style.transform = 'scale(1.02)';
-      }
-    });
-
-    trigger.addEventListener('mouseleave', function () {
-      trigger.style.transform = 'scale(1)';
-    });
-  });
 
   triggers.forEach((trigger, index) => {
     trigger.addEventListener('keydown', function (e) {
