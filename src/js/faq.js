@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
     addScrollAnimation();
   }
 
+  const triggers = document.querySelectorAll('.ac-trigger');
+
   triggers.forEach((trigger, index) => {
     trigger.addEventListener('keydown', function (e) {
       switch (e.key) {
