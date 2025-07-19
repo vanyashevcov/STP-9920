@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
       currentElement.style.transition = 'all 0.4s ease';
     },
     onOpen: function (currentElement) {
-      const icon = currentElement.querySelector('.ac-icon use');
+      const icon = currentElement.querySelector('.ac-header .ac-icon use');
       if (icon) {
         icon.setAttribute('href', './images/sprite.svg#icon-arrow-up');
       }
     },
     onClose: function (currentElement) {
-      const icon = currentElement.querySelector('.ac-icon use');
+      const icon = currentElement.querySelector('.ac-header .ac-icon use');
       if (icon) {
         icon.setAttribute('href', './images/sprite.svg#icon-arrow-down');
       }
