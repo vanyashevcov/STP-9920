@@ -5,6 +5,7 @@
 }
 
 .footer-container {
+  max-width: 231px;
   display: flex;
   flex-direction: column;
   gap: 16px;
