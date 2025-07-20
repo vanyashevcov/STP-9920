@@ -70,5 +70,3 @@ gallerySwiper.on('slideChange', () => {
       }
     });
 });
-
-gallerySwiper.emit('slideChange');
