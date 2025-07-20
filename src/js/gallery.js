@@ -1,24 +1,8 @@
-// import Swiper from 'swiper';
-// import 'swiper/css';
-
-// const swiper = new Swiper('.mySwiper', {
-//   spaceBetween: 30,
-//   effect: 'fade',
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-// });
-
 import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import 'swiper/css';
 
-var swiper = new Swiper('.mySwiper', {
-  loop: true,
+const gallerySwiper = new Swiper('.gallery-swiper', {
+  // loop: true,
   slidesPerView: 1,
   spaceBetween: 0,
   breakpoints: {
@@ -27,12 +11,64 @@ var swiper = new Swiper('.mySwiper', {
       spaceBetween: 32,
     },
   },
+
   pagination: {
-    el: '.swiper-pagination',
+    el: '.gallery-swiper-pagination',
     clickable: true,
+    renderBullet: (index, className) => {
+      return `
+        <span class="${className}" data-index=${index}>
+          <svg class="bullet-icon">
+            <use href="../images/sprite.svg#icon-step"></use>
+          </svg>
+        </span>
+      `;
+    },
   },
+
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.gallery-swiper-next',
+    prevEl: '.gallery-swiper-prev',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
   },
 });
+
+gallerySwiper.on('init', () => {
+  document
+    .querySelectorAll('.swiper-pagination-bullet')
+    .forEach((bullet, i) => {
+      const useEl = bullet.querySelector('use');
+      if (bullet.classList.contains('swiper-pagination-bullet-active')) {
+        useEl.setAttribute('href', '../images/sprite.svg#icon-step-active');
+      } else {
+        useEl.setAttribute('href', '../images/sprite.svg#icon-step');
+      }
+    });
+});
+
+gallerySwiper.init();
+
+gallerySwiper.on('slideChange', () => {
+  document
+    .querySelectorAll('.swiper-pagination-bullet')
+    .forEach((bullet, i) => {
+      const useEl = bullet.querySelector('use');
+      if (bullet.classList.contains('swiper-pagination-bullet-active')) {
+        useEl.setAttribute('href', '../images/sprite.svg#icon-step-active');
+
+        bullet.scrollIntoView({
+          behavior: 'smooth',
+          inline: 'center',
+          block: 'nearest',
+        });
+      } else {
+        useEl.setAttribute('href', '../images/sprite.svg#icon-step');
+      }
+    });
+});
+
+gallerySwiper.emit('slideChange');
