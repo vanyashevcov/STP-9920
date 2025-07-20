@@ -15,6 +15,10 @@
   align-items: center;
 }
 
+.header-container a {
+  text-decoration: none;
+}
+
 .logo {
   padding: 8px;
 }
