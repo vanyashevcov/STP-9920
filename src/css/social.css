@@ -18,7 +18,7 @@
   gap: 16px;
   justify-content: center;
 }
-.socila-link-item {
+.social-link-item {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -26,7 +26,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease, fill 0.3s ease;
 }
+
+.social-link-item:hover,
+.social-link-item:focus {
+  background-color: #da9318;
+  transform: scale(1.1);
+}
+
 .social-link-svg {
   display: block;
 }
