@@ -44,6 +44,14 @@ export default defineConfig(({ command }) => {
       SortCss({
         sort: 'mobile-first',
       }),
+      viteStaticCopy({
+        targets: [
+          {
+            src: 'src/images/sprite.svg',
+            dest: 'images'
+          }
+        ]
+      }),
       ViteImageOptimizer({
         exclude: /^sprite.svg$/,
         png: {
