@@ -36,8 +36,12 @@
   text-shadow: 0 4px 16px 0 var(--ornaments);
   margin-top: 8px;
 }
+.hero-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-.hero-btn {
+  text-decoration: none;
   border-radius: 20px;
   border: none;
   padding: 8px;
@@ -60,7 +64,7 @@
   }
 }
 
-.btn {
+.hero-link {
   position: relative;
   overflow: hidden;
   border: none;
@@ -79,7 +83,7 @@
   z-index: 0;
 }
 
-.btn::after {
+.hero-link::after {
   content: '';
   position: absolute;
   top: -50px;
@@ -93,7 +97,7 @@
   z-index: 1;
 }
 
-.btn:hover::after {
+.hero-link:hover::after {
   left: 120%;
 }
 
@@ -118,7 +122,7 @@
     letter-spacing: 0.02em;
   }
 
-  .hero-btn {
+  .hero-link {
     width: 336px;
     margin-top: 56px;
   }
