@@ -19,7 +19,7 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
       return `
         <span class="${className}" data-index=${index}>
           <svg class="bullet-icon">
-            <use href="../images/sprite.svg#icon-step"></use>
+            <use href="./images/sprite.svg#icon-step"></use>
           </svg>
         </span>
       `;
@@ -43,9 +43,9 @@ gallerySwiper.on('init', () => {
     .forEach((bullet, i) => {
       const useEl = bullet.querySelector('use');
       if (bullet.classList.contains('swiper-pagination-bullet-active')) {
-        useEl.setAttribute('href', '../images/sprite.svg#icon-step-active');
+        useEl.setAttribute('href', './images/sprite.svg#icon-step-active');
       } else {
-        useEl.setAttribute('href', '../images/sprite.svg#icon-step');
+        useEl.setAttribute('href', './images/sprite.svg#icon-step');
       }
     });
 });
@@ -58,7 +58,7 @@ gallerySwiper.on('slideChange', () => {
     .forEach((bullet, i) => {
       const useEl = bullet.querySelector('use');
       if (bullet.classList.contains('swiper-pagination-bullet-active')) {
-        useEl.setAttribute('href', '../images/sprite.svg#icon-step-active');
+        useEl.setAttribute('href', './images/sprite.svg#icon-step-active');
 
         bullet.scrollIntoView({
           behavior: 'smooth',
@@ -66,7 +66,7 @@ gallerySwiper.on('slideChange', () => {
           block: 'nearest',
         });
       } else {
-        useEl.setAttribute('href', '../images/sprite.svg#icon-step');
+        useEl.setAttribute('href', './images/sprite.svg#icon-step');
       }
     });
 });
