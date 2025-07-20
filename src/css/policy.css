@@ -1,8 +1,21 @@
-.privacy {
+.policy {
   *,
   *::before,
   *::after {
     box-sizing: border-box;
+  }
+
+  .policy-link-back {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.02em;
+    color: #1d1d1d;
   }
 
   .container {
