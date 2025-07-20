@@ -24,17 +24,18 @@
 
 .about-item {
   position: relative;
-  padding-left: 32px;
+  padding-top: 10px;
 }
 
 .about-item::before {
   content: '';
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
-  width: 8px;
-  height: 100%;
-  border-radius: 4px;
+  width: 115px;
+  height: 5px;
+  transform: translateX(-50%);
+  border-radius: 20px;
   background: url('../images/about/about-2x.jpg') center center/cover no-repeat;
   display: block;
 }
@@ -61,5 +62,16 @@
     width: 360px;
     text-align: left;
     padding: 8px;
+  }
+  .about-item {
+    padding-left: 32px;
+    padding-top: 0; 
+  }
+  .about-item::before {
+    left: 0;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    transform: none;
   }
 }

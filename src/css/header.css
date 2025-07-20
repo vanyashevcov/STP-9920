@@ -44,7 +44,17 @@
   background-color: var(--background);
   display: flex;
   flex-direction: column;
+  align-items: center;
   transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+}
+
+.mob-nav-inner {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .mob-nav[data-visible='close'] {
@@ -72,7 +82,8 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 72px 24px;
+  align-items: flex-start;
+  padding: 48px 0 0 24px;
 }
 
 .mob-menu-link {
