@@ -22,6 +22,23 @@
   color: var(--text-color);
 }
 
+.about-item {
+  position: relative;
+  padding-left: 32px;
+}
+
+.about-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  border-radius: 4px;
+  background: url('../images/about/about-2x.jpg') center center/cover no-repeat;
+  display: block;
+}
+
 @media only screen and (min-width: 1200px) {
   .about {
     padding: 88px 0 44px;
@@ -37,14 +54,11 @@
     justify-content: center;
     flex-wrap: wrap;
     row-gap: 32px;
-    column-gap: 188px;
-  }
-
-  .about-item {
-    width: 352px;
+    column-gap: 160px;
   }
 
   .about-text {
+    width: 360px;
     text-align: left;
     padding: 8px;
   }
