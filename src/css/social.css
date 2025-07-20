@@ -26,17 +26,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.social-link {
-  display: inline-block;
   transition: transform 0.3s ease, fill 0.3s ease;
 }
 
-.social-link:hover .social-link-svg,
-.social-link:focus .social-link-svg {
+.social-link-item:hover,
+.social-link-item:focus {
+  background-color: #da9318;
   transform: scale(1.1);
-  fill: #da9318;
 }
 
 .social-link-svg {
