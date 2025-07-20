@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
-import spritePath from './images/sprite.svg?url';
+import spritePath from '../images/sprite.svg?url';
 
 const gallerySwiper = new Swiper('.gallery-swiper', {
   loop: true,
