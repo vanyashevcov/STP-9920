@@ -88,6 +88,8 @@ a {
 .policy-list-unordered {
   list-style: disc;
   list-style-position: inside;
+  margin-top: 8px;
+  padding: 8px;
 }
 
 .policy-list-unordered li {
