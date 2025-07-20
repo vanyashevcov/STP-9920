@@ -18,7 +18,7 @@
   gap: 16px;
   justify-content: center;
 }
-.socila-link-item {
+.social-link-item {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -27,6 +27,18 @@
   align-items: center;
   justify-content: center;
 }
+
+.social-link {
+  display: inline-block;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.social-link:hover .social-link-svg,
+.social-link:focus .social-link-svg {
+  transform: scale(1.1);
+  fill: #da9318;
+}
+
 .social-link-svg {
   display: block;
 }
