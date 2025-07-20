@@ -1,83 +1,175 @@
-.privacy {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.policy {
+  padding: 16px;
+  max-width: 288px;
+}
+
+.policy-link-back {
+  width: 70px;
+  height: 40px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  letter-spacing: 0.02em;
+  color: #1d1d1d;
+}
+
+.policy-link-back svg {
+  fill: currentColor;
+}
+
+.policy-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.policy-title {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: var(--ornaments);
+  padding: 8px;
+  text-align: center;
+}
+
+.policy-text,
+.cookies-item-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 167%;
+  letter-spacing: 0.02em;
+  color: #1d1d1d;
+  padding: 8px;
+  text-align: center;
+}
+
+.privacy-policy-link {
+  color: var(--ornaments);
+}
+
+.policy-list-ordered {
+  display: flex;
+  flex-direction: column;
+  list-style-position: inside;
+  padding-left: 0;
+  text-align: center;
+  align-items: center;
+  margin-top: 48px;
+  gap: 32px;
+}
+
+.policy-list-item {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 167%;
+  letter-spacing: 0.02em;
+  color: #1d1d1d;
+}
+
+.policy-list-unordered {
+  list-style: disc;
+  list-style-position: inside;
+  margin-top: 8px;
+  padding: 8px;
+}
+
+.policy-list-unordered li {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 167%;
+  letter-spacing: 0.02em;
+  color: #1d1d1d;
+}
+
+.cookies-list,
+.rights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+.cookies-item {
+  font-weight: 600;
+}
+.cookies-item-text,
+.privacy-item-text {
+  padding: 0;
+}
+
+.rights {
+  font-weight: 600;
+  padding: 0;
+}
+.rights-text {
+  padding: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .policy {
+    padding: 40px 64px;
+    max-width: 885px;
   }
 
-  .container {
-    margin: 0;
-    padding-top: 40px;
-    padding-left: 64px;
-    padding-bottom: 80px;
-    width: 885px;
-  }
-
-  button {
-    width: 70px;
-    height: 40px;
-    border: none;
-    background-color: transparent;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 175%;
-    letter-spacing: 0.02em;
-    color: #1d1d1d;
-  }
-
-  ol {
-    margin: 0;
-    margin-top: 48px;
-    padding-left: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  ul {
-    list-style: disc;
-  }
-
-  h2 {
-    font-family: var(--second-family);
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 157%;
-    letter-spacing: 0.02em;
-    color: var(--ornaments);
-    padding: 8px;
+  .policy-wrapper {
+    align-items: flex-start;
     margin-top: 32px;
   }
 
-  p {
-    font-family: var(--font-family);
-    font-weight: 400;
+  .policy-title {
+    font-size: 28px;
+    line-height: 157%;
+    text-align: left;
+  }
+
+  .policy-text,
+  .cookies-item-text {
     font-size: 16px;
     line-height: 175%;
-    letter-spacing: 0.02em;
-    color: #1d1d1d;
-    padding: 8px;
+    text-align: left;
   }
 
-  li {
-    font-family: var(--font-family);
-    font-weight: 400;
+  .policy-list-ordered {
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 48px;
+    gap: 32px;
+    max-width: 1200px;
+  }
+
+  .policy-list-item {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .policy-list-unordered {
     font-size: 16px;
     line-height: 175%;
-    letter-spacing: 0.02em;
-    color: #1d1d1d;
   }
-  ol > li {
+  .policy-list-unordered li {
+    font-size: 16px;
+    line-height: 175%;
+  }
+  .cookies-item {
     font-weight: 600;
-  }
-
-  .rights {
-    font-weight: 600;
-  }
-
-  a {
-    color: var(--ornaments);
-    text-decoration: underline;
   }
 }
