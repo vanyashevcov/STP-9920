@@ -46,6 +46,13 @@
 }
 
 .cookies-modal-title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--text-color);
   margin-bottom: 16px;
 }
 
@@ -110,14 +117,9 @@ body.cookies-modal-open {
     max-width: 456px;
   }
 
-  .section-title {
-    font-size: 20px;
-    line-height: 1.4;
-  }
-
   .cookies-modal-desc {
     padding: 8px 22px;
-  } 
+  }
 
   .cookies-modal-actions {
     flex-direction: row;
@@ -126,6 +128,6 @@ body.cookies-modal-open {
     padding: 0 20px;
   }
   .cookies-modal-btn {
-      padding: 12px;
+    padding: 12px;
   }
 }
