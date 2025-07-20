@@ -101,7 +101,8 @@ a {
   color: #1d1d1d;
 }
 
-.cookies-list {
+.cookies-list,
+.rights-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -110,12 +111,17 @@ a {
 .cookies-item {
   font-weight: 600;
 }
-.cookies-item-text {
+.cookies-item-text,
+.privacy-item-text {
   padding: 0;
 }
 
 .rights {
   font-weight: 600;
+  padding: 0;
+}
+.rights-text {
+  padding: 0;
 }
 
 @media only screen and (min-width: 1200px) {
