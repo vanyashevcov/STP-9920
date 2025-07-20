@@ -41,6 +41,7 @@
   gap: 43px;
   margin: 0 auto;
   justify-content: center;
+  margin-top: 24px;
 }
 
 .gallery-swiper-pagination {
@@ -106,4 +107,8 @@
   .gallery-swiper-wrapper {
     width: 100%;
   }
+
+  .gallery-navigation {
+  margin-top: 40px;
+}
 }
