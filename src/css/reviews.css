@@ -77,7 +77,15 @@
 }
 
 .reviews-mark {
-  color: #f1a31b;
+  display: flex;
+  gap: 2px;
+}
+
+.star-icon {
+  width: 12px;
+  height: 12px;
+  fill: #f1a31b;
+  flex-shrink: 0;
 }
 
 @media only screen and (min-width: 1200px) {
