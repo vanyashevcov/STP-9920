@@ -1,8 +1,21 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
 
+const updateGalleryPaginationIcons = () => {
+  document
+    .querySelectorAll('.swiper-pagination-bullet')
+    .forEach((bullet) => {
+      const useEl = bullet.querySelector('use');
+      if (bullet.classList.contains('swiper-pagination-bullet-active')) {
+        useEl.setAttribute('href', './images/sprite.svg#icon-step-active');
+      } else {
+        useEl.setAttribute('href', './images/sprite.svg#icon-step');
+      }
+    });
+};
+
 const gallerySwiper = new Swiper('.gallery-swiper', {
-  // loop: true,
+  loop: true,
   slidesPerView: 1,
   spaceBetween: 0,
   breakpoints: {
@@ -37,36 +50,20 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
   },
 });
 
-gallerySwiper.on('init', () => {
-  document
-    .querySelectorAll('.swiper-pagination-bullet')
-    .forEach((bullet, i) => {
-      const useEl = bullet.querySelector('use');
-      if (bullet.classList.contains('swiper-pagination-bullet-active')) {
-        useEl.setAttribute('href', './images/sprite.svg#icon-step-active');
-      } else {
-        useEl.setAttribute('href', './images/sprite.svg#icon-step');
-      }
-    });
-});
+gallerySwiper.on('init', updateGalleryPaginationIcons);
 
 gallerySwiper.init();
 
-gallerySwiper.on('slideChange', () => {
-  document
-    .querySelectorAll('.swiper-pagination-bullet')
-    .forEach((bullet, i) => {
-      const useEl = bullet.querySelector('use');
-      if (bullet.classList.contains('swiper-pagination-bullet-active')) {
-        useEl.setAttribute('href', './images/sprite.svg#icon-step-active');
+updateGalleryPaginationIcons();
 
-        bullet.scrollIntoView({
-          behavior: 'smooth',
-          inline: 'center',
-          block: 'nearest',
-        });
-      } else {
-        useEl.setAttribute('href', './images/sprite.svg#icon-step');
-      }
+gallerySwiper.on('slideChange', () => {
+  updateGalleryPaginationIcons();
+  const activeBullet = document.querySelector('.swiper-pagination-bullet-active');
+  if (activeBullet) {
+    activeBullet.scrollIntoView({
+      behavior: 'smooth',
+      inline: 'center',
+      block: 'nearest',
     });
+  }
 });
