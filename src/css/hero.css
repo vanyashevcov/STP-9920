@@ -1,9 +1,3 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 .hero {
   padding: 156px 16px 156px 16px;
   background-image: url(../images/hero/hero-mob-1x.jpg);
@@ -12,7 +6,7 @@
   background-repeat: no-repeat;
   max-width: 320px;
   margin: 0 auto;
-  margin-top: 64px;
+  margin-top: 65px;
 }
 
 .hero-title {

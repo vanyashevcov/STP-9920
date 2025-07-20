@@ -1,4 +1,5 @@
-// Додаємо анімацію для секцій через animate.css (анімація лише один раз)
+window.history.scrollRestoration = 'manual';
+
 const animatedSections = document.querySelectorAll('section');
 
 const observer = new IntersectionObserver(

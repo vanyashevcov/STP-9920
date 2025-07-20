@@ -38,6 +38,8 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
   },
 });
 
+let isFirstLoad = true;
+
 gallerySwiper.on('init', () => {
   document
     .querySelectorAll('.swiper-pagination-bullet')
@@ -60,16 +62,16 @@ gallerySwiper.on('slideChange', () => {
       const useEl = bullet.querySelector('use');
       if (bullet.classList.contains('swiper-pagination-bullet-active')) {
         useEl.setAttribute('href', `${spritePath}#icon-step-active`);
-
-        bullet.scrollIntoView({
-          behavior: 'smooth',
-          inline: 'center',
-          block: 'nearest',
-        });
+        if (!isFirstLoad) {
+          bullet.scrollIntoView({
+            behavior: 'smooth',
+            inline: 'center',
+            block: 'nearest',
+          });
+        }
       } else {
         useEl.setAttribute('href', `${spritePath}#icon-step`);
       }
     });
+  isFirstLoad = false;
 });
-
-gallerySwiper.emit('slideChange');
