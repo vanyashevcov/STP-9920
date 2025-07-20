@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   background-color: var(--background);
-  z-index: 1000;
+  z-index: 999;
 }
 
 .header-container {

@@ -67,7 +67,7 @@
   line-height: 1.75;
   letter-spacing: 0.02em;
   color: var(--text-color);
-  padding: 8px 0 8px 8px;
+  padding: 8px 0;
   text-align: left;
   max-width: 100%; 
 }
@@ -88,8 +88,5 @@
     width: 246px;
     flex-shrink: 0;
     max-width: 246px;
-  }
-  .characters-description {
-    max-width: 230px;
   }
 }

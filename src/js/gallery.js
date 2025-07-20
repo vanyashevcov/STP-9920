@@ -58,12 +58,13 @@ updateGalleryPaginationIcons();
 
 gallerySwiper.on('slideChange', () => {
   updateGalleryPaginationIcons();
-  const activeBullet = document.querySelector('.swiper-pagination-bullet-active');
-  if (activeBullet) {
-    activeBullet.scrollIntoView({
-      behavior: 'smooth',
-      inline: 'center',
-      block: 'nearest',
-    });
-  }
+  // Вимкнено автоскрол до пагінації, щоб не скролило сторінку
+  // const activeBullet = document.querySelector('.swiper-pagination-bullet-active');
+  // if (activeBullet) {
+  //   activeBullet.scrollIntoView({
+  //     behavior: 'smooth',
+  //     inline: 'center',
+  //     block: 'nearest',
+  //   });
+  // }
 });
