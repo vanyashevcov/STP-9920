@@ -22,7 +22,7 @@
 
   width: 246px;
   height: 173px;
-  box-shadow: 0 4px 16px 0 var(--ornaments);
+  box-shadow: 0 4px 16px 0 rgba(184, 112, 0, 0.3);
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 16px;
@@ -36,7 +36,7 @@
 
 .features-decor {
   position: absolute;
-  top: -15px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
   width: 88px;
