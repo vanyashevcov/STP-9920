@@ -1,4 +1,3 @@
-// Update footer year
 document.addEventListener('DOMContentLoaded', function () {
   const yearElement = document.getElementById('current-year');
   if (yearElement) {
