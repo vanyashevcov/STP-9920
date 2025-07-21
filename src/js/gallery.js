@@ -40,7 +40,6 @@ const gallerySwiper = new Swiper('[data-gallery-swiper]', {
 });
 
 let isFirstInit = true;
-let isFirstLoad = true;
 
 function updateBullets() {
   const bullets = document.querySelectorAll('[data-gallery-bullet]');
@@ -53,7 +52,7 @@ function updateBullets() {
 
     useEl.setAttribute('href', `${spritePath}#${iconId}`);
 
-    if (isActive && !isFirstInit && !isFirstLoad) {
+    if (isActive && !isFirstInit) {
       bullet.scrollIntoView({
         behavior: 'smooth',
         inline: 'center',
@@ -61,7 +60,6 @@ function updateBullets() {
       });
     }
   });
-  if (isFirstLoad) isFirstLoad = false;
 }
 
 gallerySwiper.on('init', () => {
@@ -74,4 +72,3 @@ gallerySwiper.on('slideChange', () => {
 });
 
 gallerySwiper.init();
-
