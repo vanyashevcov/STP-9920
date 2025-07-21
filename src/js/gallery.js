@@ -2,7 +2,8 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css';
 import spritePath from '../images/sprite.svg?url';
 
-const gallerySwiper = new Swiper('.gallery-swiper', {
+const gallerySwiper = new Swiper('[data-gallery-swiper]', {
+  init: false,
   loop: true,
   slidesPerView: 1,
   spaceBetween: 0,
@@ -14,11 +15,11 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
   },
 
   pagination: {
-    el: '.gallery-swiper-pagination',
+    el: '[data-gallery-pagination]',
     clickable: true,
     renderBullet: (index, className) => {
       return `
-        <span class="${className}" data-index=${index}>
+        <span class="${className}" data-index="${index}" data-gallery-bullet>
           <svg class="bullet-icon">
             <use href="${spritePath}#icon-step"></use>
           </svg>
@@ -28,8 +29,8 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
   },
 
   navigation: {
-    nextEl: '.gallery-swiper-next',
-    prevEl: '.gallery-swiper-prev',
+    nextEl: '[data-gallery-next]',
+    prevEl: '[data-gallery-prev]',
   },
 
   keyboard: {
@@ -38,40 +39,28 @@ const gallerySwiper = new Swiper('.gallery-swiper', {
   },
 });
 
-let isFirstLoad = true;
+function updateBullets() {
+  const bullets = document.querySelectorAll('[data-gallery-bullet]');
+  bullets.forEach(bullet => {
+    const useEl = bullet.querySelector('use');
+    const bulletIndex = Number(bullet.dataset.index);
 
-gallerySwiper.on('init', () => {
-  document
-    .querySelectorAll('.swiper-pagination-bullet')
-    .forEach((bullet, i) => {
-      const useEl = bullet.querySelector('use');
-      if (bullet.classList.contains('swiper-pagination-bullet-active')) {
-        useEl.setAttribute('href', `${spritePath}#icon-step-active`);
-      } else {
-        useEl.setAttribute('href', `${spritePath}#icon-step`);
-      }
-    });
-});
+    const isActive = bulletIndex === gallerySwiper.realIndex;
+    const iconId = isActive ? 'icon-step-active' : 'icon-step';
+
+    useEl.setAttribute('href', `${spritePath}#${iconId}`);
+
+    if (isActive) {
+      bullet.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest',
+      });
+    }
+  });
+}
+
+gallerySwiper.on('init', updateBullets);
+gallerySwiper.on('slideChange', updateBullets);
 
 gallerySwiper.init();
-
-gallerySwiper.on('slideChange', () => {
-  document
-    .querySelectorAll('.swiper-pagination-bullet')
-    .forEach((bullet, i) => {
-      const useEl = bullet.querySelector('use');
-      if (bullet.classList.contains('swiper-pagination-bullet-active')) {
-        useEl.setAttribute('href', `${spritePath}#icon-step-active`);
-        if (!isFirstLoad) {
-          bullet.scrollIntoView({
-            behavior: 'smooth',
-            inline: 'center',
-            block: 'nearest',
-          });
-        }
-      } else {
-        useEl.setAttribute('href', `${spritePath}#icon-step`);
-      }
-    });
-  isFirstLoad = false;
-});

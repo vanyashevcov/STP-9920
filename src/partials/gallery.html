@@ -1,7 +1,7 @@
 <section id="gallery" class="gallery container">
   <h2 class="gallery-title section-title">GALLERY</h2>
 
-  <div class="swiper gallery-swiper">
+  <div class="swiper gallery-swiper" data-gallery-swiper>
     <ul class="swiper-wrapper gallery-swiper-wrapper">
       <li class="swiper-slide gallery-swiper-slide">
         <div class="gallery-img-wrapper">
@@ -111,15 +111,20 @@
     </ul>
 
     <div class="gallery-navigation">
-      <div class="swiper-button-prev gallery-swiper-prev">
+      <div class="swiper-button-prev gallery-swiper-prev" data-gallery-prev>
         <svg class="gallery-swiper-btn-svg" width="28" height="28">
           <use href="./images/sprite.svg#icon-arrow-prev"></use>
         </svg>
       </div>
 
-      <div class="swiper-pagination gallery-swiper-pagination"></div>
+      <div class="pagination-wrapper">
+        <div
+          class="swiper-pagination gallery-swiper-pagination"
+          data-gallery-pagination
+        ></div>
+      </div>
 
-      <div class="swiper-button-next gallery-swiper-next">
+      <div class="swiper-button-next gallery-swiper-next" data-gallery-next>
         <svg class="gallery-swiper-btn-svg" width="28" height="28">
           <use href="./images/sprite.svg#icon-arrow-next"></use>
         </svg>
