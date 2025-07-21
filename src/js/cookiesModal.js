@@ -4,24 +4,24 @@ document.addEventListener('DOMContentLoaded', function () {
   const declineBtn = document.getElementById('declineCookies');
   const STORAGE_KEY = 'cookiesConsent';
 
-  if (localStorage.getItem(STORAGE_KEY)) {
-    if (modal) modal.style.display = 'none';
-    document.body.classList.remove('cookies-modal-open');
-    return;
-  }
-
-  if (modal) {
-    modal.style.display = 'flex';
-    document.body.classList.add('cookies-modal-open');
-    if (window.location.hash) {
-      window.scrollTo(0, 0);
+  if (!localStorage.getItem(STORAGE_KEY)) {
+    if (modal) {
+      modal.style.display = 'flex';
+      document.body.classList.add('[data-cookies-modal-open]');
+      if (window.location.hash) {
+        window.scrollTo(0, 0);
+      }
     }
+  } else {
+    if (modal) modal.style.display = 'none';
+    document.body.classList.remove('[data-cookies-modal-open]');
+    return;
   }
 
   function handleChoice(choice) {
     localStorage.setItem(STORAGE_KEY, choice);
     if (modal) modal.style.display = 'none';
-    document.body.classList.remove('cookies-modal-open');
+    document.body.classList.remove('[data-cookies-modal-open]');
   }
 
   if (acceptBtn) {
