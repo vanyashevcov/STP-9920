@@ -1,3 +1,7 @@
+#cookiesModal {
+  display: none;
+}
+
 .cookies-modal {
   display: none;
   position: fixed;

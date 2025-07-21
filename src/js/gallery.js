@@ -39,6 +39,8 @@ const gallerySwiper = new Swiper('[data-gallery-swiper]', {
   },
 });
 
+let isFirstInit = true;
+
 function updateBullets() {
   const bullets = document.querySelectorAll('[data-gallery-bullet]');
   bullets.forEach(bullet => {
@@ -50,7 +52,7 @@ function updateBullets() {
 
     useEl.setAttribute('href', `${spritePath}#${iconId}`);
 
-    if (isActive) {
+    if (isActive && !isFirstInit) {
       bullet.scrollIntoView({
         behavior: 'smooth',
         inline: 'center',
@@ -60,7 +62,13 @@ function updateBullets() {
   });
 }
 
-gallerySwiper.on('init', updateBullets);
-gallerySwiper.on('slideChange', updateBullets);
+gallerySwiper.on('init', () => {
+  isFirstInit = true;
+  updateBullets();
+});
+gallerySwiper.on('slideChange', () => {
+  isFirstInit = false;
+  updateBullets();
+});
 
 gallerySwiper.init();
