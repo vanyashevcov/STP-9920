@@ -10,6 +10,7 @@
 
 .gallery-swiper-wrapper {
   text-align: center;
+  width: 100%;
 }
 
 .gallery-swiper-slide {
@@ -38,9 +39,14 @@
   width: 208px;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  align-items: center;
+  margin: 24px auto 0;
   gap: 43px;
-  margin-top: 24px;
+}
+
+.pagination-wrapper {
+  max-width: 42px;
+  overflow: hidden;
 }
 
 .gallery-swiper-pagination {
@@ -48,12 +54,14 @@
   justify-content: flex-start;
   align-items: center;
   gap: 3px;
-  overflow-x: auto;
-  max-width: 42px;
-  min-width: 42px;
+
+  max-width: 100%;
+  padding: 4px 0;
   flex-shrink: 0;
+  overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .gallery-swiper-pagination::-webkit-scrollbar {
@@ -64,13 +72,13 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  opacity: 1;
-  transition: all 0.3s;
-  color: #d9d9d9;
   width: 10px;
   height: 10px;
   flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #d9d9d9;
+  opacity: 1;
 }
 
 .gallery-swiper-pagination
@@ -78,6 +86,10 @@
   color: #b87000;
   width: 14px;
   height: 14px;
+}
+
+[data-gallery-bullet][data-active='true'] use {
+  color: #b87000;
 }
 
 .gallery-swiper-pagination .swiper-pagination-bullet svg {
@@ -88,9 +100,6 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  body {
-    overflow-x: hidden;
-  }
   .gallery {
     padding: 44px 0;
     overflow-x: hidden;
@@ -99,15 +108,9 @@
   }
   .gallery-swiper {
     margin-top: 40px;
-    width: 100%;
     max-width: 922px;
-    overflow: hidden;
   }
-  .gallery-swiper-wrapper {
-    width: 100%;
-  }
-
   .gallery-navigation {
-  margin-top: 40px;
-}
+    margin-top: 40px;
+  }
 }
