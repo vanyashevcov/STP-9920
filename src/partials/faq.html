@@ -2,24 +2,29 @@
   <div class="faq-container container">
     <h2 class="section-title faq-title">FAQ</h2>
     <div class="faq-content">
-        <img
-          srcset="./images/faq/faq-1x.png 1x, ./images/faq/faq-2x.png 2x"
-          src="./images/faq/faq-1x.png"
-          alt="Game Character"
-          class="character-image"
-        />
-        <div class="accordion-container" id="faq-accordion">
-          <div class="ac">
-            <h2 class="ac-header">
-              <button type="button" class="ac-trigger" aria-expanded="true">
-                <span class="button-text">Is the game story-driven?</span>
-                <svg class="ac-icon" aria-hidden="true">
+      <img
+        srcset="./images/faq/faq-1x.png 1x, ./images/faq/faq-2x.png 2x"
+        src="./images/faq/faq-1x.png"
+        alt="Game Character"
+        class="character-image"
+      />
+      <div data-ac-wrapper>
+        <div class="ac" data-ac>
+          <h2 class="ac-header" data-ac-header>
+            <button
+              type="button"
+              class="ac-trigger"
+              aria-expanded="true"
+              data-ac-trigger
+            >
+              <span class="button-text">Is the game story-driven?</span>
+              <svg aria-hidden="true" data-ac-icon>
                 <use href="./images/sprite.svg#icon-arrow-down"></use>
               </svg>
             </button>
           </h2>
-            <div class="ac-panel">
-              <div class="ac-text">
+          <div class="ac-panel">
+            <div data-ac-content>
               <p>
                 Yes! It’s designed for those who love immersive narratives,
                 mystery, and decision-based progression.
@@ -27,17 +32,17 @@
             </div>
           </div>
         </div>
-          <div class="ac">
-            <h2 class="ac-header">
-              <button type="button" class="ac-trigger">
-                <span class="button-text">Is it educational?</span>
-                <svg class="ac-icon" aria-hidden="true">
+        <div class="ac" data-ac>
+          <h2 class="ac-header" data-ac-header>
+            <button type="button" class="ac-trigger" data-ac-trigger>
+              <span class="button-text">Is it educational?</span>
+              <svg aria-hidden="true" data-ac-icon>
                 <use href="./images/sprite.svg#icon-arrow-down"></use>
               </svg>
             </button>
           </h2>
-            <div class="ac-panel">
-              <div class="ac-text">
+          <div class="ac-panel">
+            <div data-ac-content>
               <p>
                 Absolutely. You’ll learn fascinating facts about gems, their
                 history, and symbolism throughout the game.
@@ -45,37 +50,37 @@
             </div>
           </div>
         </div>
-          <div class="ac">
-            <h2 class="ac-header">
-              <button type="button" class="ac-trigger">
-                <span class="button-text">Is the game free?</span>
-                <svg class="ac-icon" aria-hidden="true">
+        <div class="ac" data-ac>
+          <h2 class="ac-header" data-ac-header>
+            <button type="button" class="ac-trigger" data-ac-trigger>
+              <span class="button-text">Is the game free?</span>
+              <svg aria-hidden="true" data-ac-icon>
                 <use href="./images/sprite.svg#icon-arrow-down"></use>
               </svg>
             </button>
           </h2>
-            <div class="ac-panel">
-              <div class="ac-text">
+          <div class="ac-panel">
+            <div data-ac-content>
               <p>
-                Yes, with optional purchases for visual customization and gameplay
-                boosts.
+                Yes, with optional purchases for visual customization and
+                gameplay boosts.
               </p>
             </div>
           </div>
         </div>
-          <div class="ac">
-            <h2 class="ac-header">
-              <button type="button" class="ac-trigger">
-                <span class="button-text"
-                  >Can I replay the game with different choices?</span
-                >
-                <svg class="ac-icon" aria-hidden="true">
+        <div class="ac" data-ac>
+          <h2 class="ac-header" data-ac-header>
+            <button type="button" class="ac-trigger" data-ac-trigger>
+              <span class="button-text"
+                >Can I replay the game with different choices?</span
+              >
+              <svg aria-hidden="true" data-ac-icon>
                 <use href="./images/sprite.svg#icon-arrow-down"></use>
               </svg>
             </button>
           </h2>
-            <div class="ac-panel">
-              <div class="ac-text">
+          <div class="ac-panel">
+            <div data-ac-content>
               <p>
                 Yes. Your decisions shape the outcome — replay to uncover both
                 endings.
@@ -83,17 +88,19 @@
             </div>
           </div>
         </div>
-          <div class="ac">
-            <h2 class="ac-header">
-              <button type="button" class="ac-trigger">
-                <span class="button-text">What type of puzzles are included?</span>
-                <svg class="ac-icon" aria-hidden="true">
+        <div class="ac" data-ac>
+          <h2 class="ac-header" data-ac-header>
+            <button type="button" class="ac-trigger" data-ac-trigger>
+              <span class="button-text"
+                >What type of puzzles are included?</span
+              >
+              <svg aria-hidden="true" data-ac-icon>
                 <use href="./images/sprite.svg#icon-arrow-down"></use>
               </svg>
             </button>
           </h2>
-            <div class="ac-panel">
-              <div class="ac-text">
+          <div class="ac-panel">
+            <div data-ac-content>
               <p>
                 Mostly gem sorting and matching with a focus on artistic
                 restoration.
