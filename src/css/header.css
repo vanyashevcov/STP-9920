@@ -94,7 +94,7 @@
   padding: 48px 0 0 24px;
 }
 
-.mob-menu-link {
+.mob-menu-item a {
   font-family: var(--font-family);
   font-size: 16px;
   line-height: 1.75;
