@@ -16,7 +16,7 @@
   line-height: 157%;
   letter-spacing: 0.02em;
   color: var(--general);
-  text-shadow: 0 4px 16px 0 var(--ornaments);
+  text-shadow: 0 4px 16px var(--ornaments);
   max-width: 376px;
 }
 
@@ -27,7 +27,7 @@
   line-height: 167%;
   letter-spacing: 0.02em;
   color: var(--general);
-  text-shadow: 0 4px 16px 0 var(--ornaments);
+  text-shadow: 0 4px 16px var(--ornaments);
   margin-top: 8px;
 }
 .hero-link {
