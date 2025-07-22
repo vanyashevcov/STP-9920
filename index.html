@@ -874,30 +874,36 @@
   </div>
 </footer>
 
-    <div class="cookies-modal" id="cookiesModal">
-  <div class="cookies-modal-wrap animate__animated animate__zoomIn">
-      <img
-        src="/STP-9920/assets/cookie-1x-DUkMhN-j.png"
-        srcset="/STP-9920/assets/cookie-1x-DUkMhN-j.png 1x, /STP-9920/assets/cookie-2x-CLWgQ3BE.png 2x"
-        alt="Cookie Cat"
-        class="cookies-modal-cat"
-      />
-    <div class="cookies-modal-content">
-      <h2 class="cookies-modal-title">WE USE COOKIES!</h2>
-      <p class="cookies-modal-desc">
+    <div class="cookies-modal" id="cookiesModal" data-cookies-modal>
+  <div
+    class="cookies-modal-wrap animate__animated animate__zoomIn"
+    data-cookies-wrap
+  >
+    <img
+      src="/STP-9920/assets/cookie-1x-DUkMhN-j.png"
+      srcset="/STP-9920/assets/cookie-1x-DUkMhN-j.png 1x, /STP-9920/assets/cookie-2x-CLWgQ3BE.png 2x"
+      alt="Cookie Cat"
+      class="cookies-modal-cat"
+      data-cookies-cat
+    />
+    <div class="cookies-modal-content" data-cookies-content>
+      <h2 class="cookies-modal-title" data-cookies-title>WE USE COOKIES!</h2>
+      <p class="cookies-modal-desc" data-cookies-desc>
         We use cookies to improve your experience on our website. By browsing
         this website, you agree to our use of cookies
       </p>
-      <div class="cookies-modal-actions">
+      <div class="cookies-modal-actions" data-cookies-actions>
         <button
           class="cookies-modal-btn cookies-modal-btn--accept"
           id="acceptCookies"
+          data-cookies-accept
         >
           ACCEPT COOKIES
         </button>
         <button
           class="cookies-modal-btn cookies-modal-btn--decline"
           id="declineCookies"
+          data-cookies-decline
         >
           DECLINE COOKIES
         </button>
