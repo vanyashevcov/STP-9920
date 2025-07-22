@@ -147,7 +147,6 @@
 @media only screen and (min-width: 1200px) {
   .gallery {
     padding: 44px 0;
-    overflow-x: hidden;
     max-width: 922px;
     margin: 0 auto;
   }
