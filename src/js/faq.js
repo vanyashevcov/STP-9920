@@ -1,10 +1,10 @@
 import Accordion from 'accordion-js/dist/accordion.min.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-  const accordion = new Accordion('#faq-accordion', {
+  const accordion = new Accordion('[data-ac-wrapper]', {
     duration: 400,
     showMultiple: false,
-    openOnInit: [0], 
+    openOnInit: [0],
     elementClass: 'ac',
     triggerClass: 'ac-trigger',
     panelClass: 'ac-panel',
@@ -15,18 +15,26 @@ document.addEventListener('DOMContentLoaded', function () {
     beforeClose: function (currentElement) {
       currentElement.style.transition = 'all 0.4s ease';
     },
-    onOpen: function (currentElement) {
-      const icon = currentElement.querySelector('.ac-header .ac-icon use');
+
+    onOpen(currentElement) {
+      const icon = currentElement.querySelector(
+        '[data-ac-header] [data-ac-icon]  use'
+      );
       if (icon) {
-        const spritePath = icon.getAttribute('href')?.split('#')[0] || './images/sprite.svg';
+        const spritePath =
+          icon.getAttribute('href')?.split('#')[0] || './images/sprite.svg';
         icon.setAttribute('href', `${spritePath}#icon-arrow-up`);
         icon.setAttribute('xlink:href', `${spritePath}#icon-arrow-up`);
       }
     },
+
     onClose: function (currentElement) {
-      const icon = currentElement.querySelector('.ac-header .ac-icon use');
+      const icon = currentElement.querySelector(
+        '[data-ac-header] [data-ac-icon]  use'
+      );
       if (icon) {
-        const spritePath = icon.getAttribute('href')?.split('#')[0] || './images/sprite.svg';
+        const spritePath =
+          icon.getAttribute('href')?.split('#')[0] || './images/sprite.svg';
         icon.setAttribute('href', `${spritePath}#icon-arrow-down`);
         icon.setAttribute('xlink:href', `${spritePath}#icon-arrow-down`);
       }
@@ -49,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     );
 
-    const accordionItems = document.querySelectorAll('.ac');
+    const accordionItems = document.querySelectorAll('[data-ac]');
     accordionItems.forEach(item => {
       item.style.opacity = '0';
       item.style.transform = 'translateY(20px)';
@@ -62,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     addScrollAnimation();
   }
 
-  const triggers = document.querySelectorAll('.ac-trigger');
+  const triggers = document.querySelectorAll('[data-ac-trigger]');
 
   triggers.forEach((trigger, index) => {
     trigger.addEventListener('keydown', function (e) {
