@@ -38,10 +38,11 @@
 .gallery-navigation {
   width: 208px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 24px auto 0;
   gap: 43px;
+  padding: 2px;
 }
 
 .pagination-wrapper {
@@ -99,6 +100,50 @@
   display: block;
 }
 
+/* ==== */
+.gallery-swiper-prev,
+.gallery-swiper-next {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #b87000;
+  border-radius: 4px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gallery-swiper-btn-svg use {
+  fill: #b87000;
+  transition: fill 0.3s ease;
+}
+
+.gallery-swiper-prev:hover,
+.gallery-swiper-next:hover,
+.gallery-swiper-prev:focus,
+.gallery-swiper-next:focus {
+  background-color: #da9318;
+  border: none;
+}
+
+.gallery-swiper-prev:active,
+.gallery-swiper-next:active {
+  background-color: #b87000;
+  border: none;
+}
+
+.gallery-swiper-prev:hover .gallery-swiper-btn-svg use,
+.gallery-swiper-next:hover .gallery-swiper-btn-svg use,
+.gallery-swiper-prev:focus .gallery-swiper-btn-svg use,
+.gallery-swiper-next:focus .gallery-swiper-btn-svg use,
+.gallery-swiper-prev:active .gallery-swiper-btn-svg use,
+.gallery-swiper-next:active .gallery-swiper-btn-svg use {
+  fill: #efe9d9;
+}
+
+/* === */
 @media only screen and (min-width: 1200px) {
   .gallery {
     padding: 44px 0;
@@ -111,6 +156,7 @@
     max-width: 922px;
   }
   .gallery-navigation {
+    width: 216px;
     margin-top: 40px;
   }
 }

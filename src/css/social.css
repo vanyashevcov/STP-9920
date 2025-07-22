@@ -35,6 +35,11 @@
   transform: scale(1.1);
 }
 
+.social-link-item:active {
+  background-color: #f4b549;
+  transform: scale(1.1);
+}
+
 .social-link-svg {
   display: block;
 }
