@@ -63,11 +63,10 @@ function updateBullets() {
 }
 
 gallerySwiper.on('init', () => {
-  isFirstInit = true;
   updateBullets();
+  isFirstInit = false;
 });
 gallerySwiper.on('slideChange', () => {
-  isFirstInit = false;
   updateBullets();
 });
 
