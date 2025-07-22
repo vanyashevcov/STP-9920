@@ -26,10 +26,16 @@ a {
   line-height: 175%;
   letter-spacing: 0.02em;
   color: #1d1d1d;
+  transition: color 250ms ease-in-out;
 }
 
 .policy-link-back svg {
   fill: currentColor;
+}
+.policy-link-back:hover,
+.policy-link-back:focus {
+  color: var(--ornaments);
+  text-decoration: underline;
 }
 
 .policy-wrapper {
