@@ -8,7 +8,7 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
-@import url('./smooth-scroll.css');
+
 
 /* Sections style */
 @import url('./header.css');
@@ -24,3 +24,4 @@
 @import url('./footer.css');
 @import url('./policy.css');
 @import url('./cookiesModal.css');
+@import url('./smooth-scroll.css');
