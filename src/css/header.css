@@ -104,9 +104,9 @@
   transition: color 250ms ease-in-out;
 }
 
-.mob-menu-item:hover .mob-menu-link,
-.mob-menu-item:focus .mob-menu-link,
-.mob-menu-item:active .mob-menu-link {
+.mob-menu-item:hover a,
+.mob-menu-item:focus a,
+.mob-menu-item:active a {
   color: var(--ornaments);
   text-decoration: underline;
 }
