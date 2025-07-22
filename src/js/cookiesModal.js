@@ -1,27 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const modal = document.getElementById('cookiesModal');
-  const acceptBtn = document.getElementById('acceptCookies');
-  const declineBtn = document.getElementById('declineCookies');
+  const modal = document.querySelector('[data-cookies-modal]');
+  const acceptBtn = document.querySelector('[data-cookies-accept]');
+  const declineBtn = document.querySelector('[data-cookies-decline]');
   const STORAGE_KEY = 'cookiesConsent';
 
   if (!localStorage.getItem(STORAGE_KEY)) {
     if (modal) {
       modal.style.display = 'flex';
-      document.body.classList.add('[data-cookies-modal-open]');
+      document.body.setAttribute('data-cookies-modal-open', '');
       if (window.location.hash) {
         window.scrollTo(0, 0);
       }
     }
   } else {
     if (modal) modal.style.display = 'none';
-    document.body.classList.remove('[data-cookies-modal-open]');
+    document.body.removeAttribute('data-cookies-modal-open');
     return;
   }
 
   function handleChoice(choice) {
     localStorage.setItem(STORAGE_KEY, choice);
     if (modal) modal.style.display = 'none';
-    document.body.classList.remove('[data-cookies-modal-open]');
+    document.body.removeAttribute('data-cookies-modal-open');
   }
 
   if (acceptBtn) {
@@ -35,4 +35,4 @@ document.addEventListener('DOMContentLoaded', function () {
       handleChoice('declined');
     });
   }
-}); 
+});
