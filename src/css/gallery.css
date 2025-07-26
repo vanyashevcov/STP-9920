@@ -17,8 +17,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
-  height: 478px;
+  width: 286px;
+  height: 494px;
   box-sizing: border-box;
 }
 
@@ -26,13 +26,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 286px;
+  height: 494px;
 }
 
 .gallery-swiper-img {
-  width: 286px;
-  height: 494px;
+  width: 270px;
+  height: 478px;
+  object-fit: cover;
 }
 
 .gallery-navigation {
